@@ -8,5 +8,5 @@ Make sure you are building the class inheritance diagram in the reading:
 
 
 > ***NOTE:***
-> - Reading the book helps! Ch. 10 has a lot of information and code on AVL trees and the parts required above!
+> - Reading the book helps! Ch. 9 has a lot of information and code on AVL trees and the parts required above!
 > - Don't forget about the bug in the code, mentioned on the Slack channel!
