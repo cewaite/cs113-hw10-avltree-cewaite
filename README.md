@@ -6,7 +6,6 @@ Complete the `AVLTree` class by coding the missing methods for insertion only (o
 Make sure you are building the class inheritance diagram in the reading:
 `BinaryTree <-- BinarySearchTree <-- BinarySearchTreeWithRotate <-- AVLTree`
 
-
 > ***NOTE:***
 > - Reading the book helps! Ch. 9 has a lot of information and code on AVL trees and the parts required above!
-> - Don't forget about the bug in the code, mentioned on the Slack channel!
+> - Note the following bug in the text's source code: `rebalanceLeft` on p. 487 does not update the left child's balance when a right - left imbalance occurs. This would also be the case for left - right imbalances with a `rebalanceRight` implementation based on that `rebalanceLeft`. An additional conditional block is required when checking for left - right- right or left - right - left imbalances.
