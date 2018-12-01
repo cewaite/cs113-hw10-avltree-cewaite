@@ -1,9 +1,9 @@
 package edu.miracosta.cs113;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.io.Serializable;
 
 /**
  * BinaryTree : Class for a binary tree that stores objects of type E. Code derived from Koffman & Wolfgang's Data
@@ -157,11 +157,6 @@ public class BinaryTree<E> implements Serializable {
         }
     }
 
-    /**
-     * Returns a simple String representation of this BinaryTree.
-     *
-     * @return a String visualizing this BinaryTree whose node's data are presented through a pre-order traversal.
-     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -172,8 +167,7 @@ public class BinaryTree<E> implements Serializable {
     /**
      * Constructs and returns a polymorphic String visualization of this {@link BinaryTree}.
      *
-     * @return A String containing a structural visualization of this {@link BinaryTree} and the data stored within
-     *         each {@link Node} it contains.
+     * @return A String containing a structural visualization of this {@link BinaryTree} and the data stored within each {@link Node} it contains.
      *
      * @author Christopher Martin
      * @version 1.0
@@ -182,8 +176,7 @@ public class BinaryTree<E> implements Serializable {
         // Use StringBuilder to save memory/time while dynamically building up the output String.
         StringBuilder output = new StringBuilder();
 
-        // Store each line of output initially instead of directly putting them in the StringBuilder because the node
-        // data needs to be inserted after the tree structure has been generated.
+        // Store each line of output initially instead of directly putting them in the StringBuilder because the node data needs to be inserted after the tree structure has been generated.
         List<List<String>> lines = new ArrayList<List<String>>();
 
         // Store the current height level of the BinaryTree to log its data and construct the tree structure.
@@ -193,14 +186,12 @@ public class BinaryTree<E> implements Serializable {
         // Store the children of the nodes in the current level to log next.
         List<Node<E>> nextLevel = new ArrayList<Node<E>>();
 
-        // Store the longest encountered node toString to help calculate a visually appealing offset for each tree
-        // level.
+        // Store the longest encountered node toString to help calculate a visually appealing offset for each tree level.
         int widestNodeStringLength = 0;
 
         boolean hasMoreNodes = false;
         do {
-            // Store all the node data at the current level in order to add it to the List of all lines after
-            // completion.
+            // Store all the node data at the current level in order to add it to the List of all lines after completion.
             List<String> currentLine = new ArrayList<String>();
 
             // Log the toString and children of each node on the current level.
@@ -319,8 +310,7 @@ public class BinaryTree<E> implements Serializable {
                 }
             }
 
-            // Reduce the number of leading spaces by half so the following line can accommodate potentially twice
-            // the number of nodes.
+            // Reduce the number of leading spaces by half so the following line can accommodate potentially twice the number of nodes.
             levelLeadingSpaces /= 2;
             output.append('\n');
         }
