@@ -1,5 +1,5 @@
-# CS113-HW11-AVLTree
-## HW #11 for CS113 - AVL Tree (w/o removal)
+# CS113-HW10-AVLTree
+## HW #10 for CS113 - AVL Tree (w/o removal)
 
 **[//Insert Build Status Image//]**
 
