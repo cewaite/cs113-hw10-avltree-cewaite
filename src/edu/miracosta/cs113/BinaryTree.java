@@ -45,6 +45,8 @@ public class BinaryTree<E> implements Serializable {
         // Set left subtree
         if (leftTree != null) {
             root.left = leftTree.root;
+            leftTree.root.parent = root;
+            leftTree.root.isLeft = true;
         }
         else {
             root.left = null;
@@ -53,6 +55,7 @@ public class BinaryTree<E> implements Serializable {
         // Set right subtree
         if (rightTree != null) {
             root.right = rightTree.root;
+            rightTree.root.parent = root;
         }
         else {
             root.right = null;
@@ -173,6 +176,7 @@ public class BinaryTree<E> implements Serializable {
      * @author Christopher Martin
      * @version 1.0
      */
+    /*
     public String toString2() {
         // Use StringBuilder to save memory/time while dynamically building up the output String.
         StringBuilder output = new StringBuilder();
@@ -322,6 +326,8 @@ public class BinaryTree<E> implements Serializable {
 
         return output.toString();
     }
+    */
+
 
     /**
      * The inner class for the BinaryTree, a specialized node which may hold any data type.
@@ -335,6 +341,9 @@ public class BinaryTree<E> implements Serializable {
         protected Node<E> left;
         /** The Node's right subtree. */
         protected Node<E> right;
+        /** The Node's parent. */
+        protected Node<E> parent;
+        protected boolean isLeft;
 
         /**
          * Constructor which stores the given data in this Node.
@@ -345,6 +354,8 @@ public class BinaryTree<E> implements Serializable {
             this.data = data;
             left = null;
             right = null;
+            parent = null;
+            isLeft = false;
         }
 
         @Override

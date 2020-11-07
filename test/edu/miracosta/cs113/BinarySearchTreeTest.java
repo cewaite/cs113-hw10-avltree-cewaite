@@ -105,7 +105,7 @@ public class BinarySearchTreeTest {
         // Validate simple toString constructed through an inorder traversal.
 
         System.out.println("Simple toString:\n\n" + strTree);
-        System.out.println("Polymorphic toString:\n\n" + strTree.toString2());
+//        System.out.println("Polymorphic toString:\n\n" + strTree.toString2());
     }
 
 
